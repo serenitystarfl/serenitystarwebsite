@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     STAY PAGE  (stay.html)
+     ----------------------------------------------------------------
+     EDITING THIS PAGE:
+     - Look for blocks marked 'EDIT:' below. Each one calls out the
+       text, link, price, or image you can safely change.
+     - Headlines live inside <h1>, <h2>, <h3> tags.
+     - Body copy lives inside <p> tags.
+     - Button text is the words between <a ...>...</a> tags.
+     - Prices and dates are plain text inside the relevant card body.
+     - To swap a photo, replace the src="assets/photos/<filename>.jpg".
+     - Don't change indentation, the class="..." attributes, or the
+       tag structure — those control how it looks.
+
+     This page contains:
+       - Hero
+       - What to Expect bullet list (amenities)
+       - Hipcamp section (Brittany to send listing URL)
+       - Inquire CTA
+       - Footer
+
+     For the full guide, see CONTENT_GUIDE.md in the project root.
+===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stay | Serenity Star</title>
+  <meta name="description" content="A converted bus and cabin accommodation on the property in North Fort Myers, for guests of the work. Two-night minimum." />
+  <!-- Open Graph / social share -->
+  <meta property="og:title" content="Stay | Serenity Star" />
+  <meta property="og:description" content="Camper accommodation on the property in North Fort Myers, for guests of the work. Listed on Hipcamp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photos/firepit-yard.jpg" />
+  <meta property="og:url" content="https://serenitystar.co/stay.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stay | Serenity Star" />
+  <meta name="twitter:description" content="Camper accommodation on the property in North Fort Myers, for guests of the work. Listed on Hipcamp." />
+  <meta name="twitter:image" content="assets/photos/firepit-yard.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+</head>
+<body>
+
+  <header class="site-header is-light">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+        <span class="brand-name">Serenity Star</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="kambo.html">Kambo</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stay.html">Stay</a></li>
+        </ul>
+      </nav>
+      <a href="coaching.html" class="nav-cta">Book a call</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="kambo.html">Kambo</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="stay.html">Stay</a>
+    <a href="coaching.html" class="btn btn-primary">Book a call</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero hero-sub">
+    <div class="hero-media">
+      <img src="assets/photos/camper-exterior-accommodation.jpg" alt="Exterior of the camper accommodation at Serenity Star, surrounded by Florida pine forest" />
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow" style="color: var(--sand);">Stay</span>
+      <!-- EDIT: page headline (change the text between <h1>...</h1>) -->
+      <h1>Sleep on the <em>property</em>.</h1>
+      <!-- EDIT: hero intro paragraph -->
+      <p class="lead">
+        The Main House is not available for guest rentals. Camper accommodations
+        are available on the property, primarily for guests coming in for
+        coaching, kambo, or retreats.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== SPLIT INFO =================== -->
+  <section class="bg-cream-soft">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src="assets/photos/firepit-yard.jpg" alt="Fire pit and outdoor seating area" />
+        </div>
+        <div class="split-text reveal">
+          <span class="eyebrow">What to Expect</span>
+          <ul style="list-style: none; padding: 0; margin: 1.25rem 0 1.75rem; display: grid; gap: 0.75rem; font-family: var(--font-body); font-size: 0.9375rem; color: var(--ink);">
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> The Main House is not available for rent. Camper accommodations are available throughout the property.</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Two-night minimum</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Fire pit and outdoor seating area</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Access to sauna, cold plunge, and studio within session hours</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Use of property amenities and facilities included</li>
+          </ul>
+          <p style="font-size: 0.875rem; color: var(--ink-soft);">
+            Private and group sauna &amp; ice bath sessions are available. <a href="contact.html" style="color: var(--ink); border-bottom: 1px solid var(--line);">Inquire here.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== STAY WITH US (HIPCAMP) =================== -->
+  <section>
+    <div class="container-narrow text-center reveal">
+      <span class="eyebrow">Stay With Us</span>
+      <h2 style="font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 1rem;">Listed on Hipcamp.</h2>
+      <p class="lead" style="margin: 0 auto 2rem;">
+        Accommodations are listed on Hipcamp for guests looking for a peaceful
+        stay immersed in nature.
+      </p>
+      <a href="https://hipcamp.onelink.me/ZwFp?af_r=https%3A%2F%2Fwww.hipcamp.com%2Fland%2Fy0zhvm5r&deep_link_value=land%2Fy0zhvm5r&share_id=288fsabo0gw&utm_medium=share&utm_source=share_content" target="_blank" rel="noopener" class="btn btn-ghost btn-arrow">Book on Hipcamp</a>
+    </div>
+  </section>
+
+  <!-- =================== INQUIRE CTA =================== -->
+  <section class="bg-ink">
+    <div class="container-narrow text-center reveal">
+      <h2 class="display" style="color: var(--cream-soft);">
+        Coming for the <em style="color: var(--sand);">work</em>?
+      </h2>
+      <p class="lead" style="color: rgba(251,247,240,0.8); margin: 1.5rem auto 2.5rem;">
+        If you're traveling in for coaching, kambo, or a retreat, let us know
+        and we'll coordinate your room along with your sessions.
+      </p>
+      <a href="contact.html" class="btn btn-light btn-arrow">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <!-- EDIT: footer (shared with every page) — update once and copy/paste to all 7 HTML files -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+            <span class="brand-name">Serenity Star</span>
+          </div>
+          <p>Wellness, coaching, and ceremony on a private property in Southwest Florida.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Classes</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="kambo.html">Kambo</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="stay.html">Stay</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Rent Our Space</a></li>
+            <li><a href="coaching.html">Book a discovery call</a></li>
+            <!-- Replace with Brittany's Instagram handle -->
+            <li><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener">Join our WhatsApp community</a></li>
+            <li><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="mailto:serenitystarfl@gmail.com">serenitystarfl@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>The Land</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></li>
+            <li>By appointment &amp; booking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Serenity Star</span>
+        <span>Crafted with intention</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

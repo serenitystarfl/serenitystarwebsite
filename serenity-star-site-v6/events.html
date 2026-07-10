@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     EVENTS PAGE  (events.html)
+     ----------------------------------------------------------------
+     EDITING THIS PAGE:
+     - Look for blocks marked 'EDIT:' below. Each one calls out the
+       text, link, price, or image you can safely change.
+     - Headlines live inside <h1>, <h2>, <h3> tags.
+     - Body copy lives inside <p> tags.
+     - Button text is the words between <a ...>...</a> tags.
+     - Prices and dates are plain text inside the relevant card body.
+     - To swap a photo, replace the src="assets/photos/<filename>.jpg".
+     - Don't change indentation, the class="..." attributes, or the
+       tag structure — those control how it looks.
+
+     This page contains:
+       - Hero
+       - Every Week cards (Bridge Between, Divine Alignment, Sauna & Cold Plunge)
+       - Special Evenings cards
+       - Google Calendar embed (needs public-sharing fix — see comment by the iframe)
+       - Email signup (Mailchimp — see comment inside the form)
+       - Footer
+
+     For the full guide, see CONTENT_GUIDE.md in the project root.
+===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events &amp; Weekly Classes | Serenity Star</title>
+  <meta name="description" content="Weekly yoga, breathwork, sound baths, ice immersion, and special evenings on the property in North Fort Myers." />
+  <!-- Open Graph / social share -->
+  <meta property="og:title" content="Events & Weekly Classes | Serenity Star" />
+  <meta property="og:description" content="Weekly yoga, breathwork, sound baths, ice immersion, and special evenings on the property in North Fort Myers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photos/aerial-deck-people.jpg" />
+  <meta property="og:url" content="https://serenitystar.co/events.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Events & Weekly Classes | Serenity Star" />
+  <meta name="twitter:description" content="Weekly yoga, breathwork, sound baths, ice immersion, and special evenings on the property in North Fort Myers." />
+  <meta name="twitter:image" content="assets/photos/aerial-deck-people.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+</head>
+<body>
+
+  <header class="site-header is-light">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+        <span class="brand-name">Serenity Star</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="kambo.html">Kambo</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stay.html">Stay</a></li>
+        </ul>
+      </nav>
+      <a href="coaching.html" class="nav-cta">Book a call</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="kambo.html">Kambo</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="stay.html">Stay</a>
+    <a href="coaching.html" class="btn btn-primary">Book a call</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero hero-sub">
+    <div class="hero-media">
+      <img src="assets/photos/aerial-deck-people.jpg" alt="Aerial of the sauna deck with people" />
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow" style="color: var(--sand);">Events and Weekly Classes</span>
+      <!-- EDIT: page headline (change the text between <h1>...</h1>) -->
+      <h1><em>Drop in</em>, bring a friend.</h1>
+      <!-- EDIT: hero intro paragraph -->
+      <p class="lead">
+        Weekly classes, sound baths, spiritual circles, and sauna and cold plunge
+        sessions. Check the calendar below for everything coming up.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== EVERY WEEK =================== -->
+  <!--
+    ====================================================================
+    BOOKING BUTTONS — Stripe-ready
+    Every "Book a spot" / "Book a session" button below uses the
+    Calendly URL as a placeholder. To switch to Stripe Checkout:
+
+      1. In Stripe Dashboard, create a Product for each event/class
+         (e.g. "The Bridge Between — single class").
+      2. Create a Price for each Product and copy the
+         Payment Link URL Stripe gives you (looks like:
+         https://buy.stripe.com/XXXXXXXXXX).
+      3. Open this file in a text editor and search for
+         "calendly.com/serenitystarfl/30min" in the booking-button
+         hrefs below. Replace each one with the matching Stripe
+         Payment Link URL.
+
+    Each booking button is marked with a STRIPE: comment so they're
+    easy to find. Leave target="_blank" and rel="noopener" intact.
+    ====================================================================
+  -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Every Week</span>
+        <h2 class="display">Recurring weekly classes.</h2>
+      </div>
+
+      <div class="card-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+
+        <!-- Cards ordered chronologically through the week: Wed → Thu → Fri, then Sauna (by inquiry). -->
+
+        <!-- Evening Reset (Wednesdays — Cold Plunge + Sound Bath with Tiffany) -->
+        <article class="card">
+          <div class="card-image portrait">
+            <img src="assets/photos/evening-reset-event.jpg" alt="Evening Reset event: Wednesday Cold Plunge and Sound Healing session at Serenity Star with Tiffany Maria Macia" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Select Wednesdays · 6:00pm</span>
+            <h3>Evening Reset: Cold Plunge &amp; Sound Bath</h3>
+            <p>A mid-week wellness experience combining the invigorating benefits of cold water immersion with the deeply relaxing sounds of crystal singing bowls. Release stress, recharge your energy, and reconnect with yourself.</p>
+            <p style="font-size: 0.875rem;">
+              <strong style="color: var(--ink); font-weight: 500;">Facilitated by</strong> Tiffany Maria Macia
+            </p>
+            <div style="display: grid; gap: 0.4rem; margin: 0.5rem 0 1.25rem; font-family: var(--font-body); font-size: 0.8125rem; color: var(--ink-soft);">
+              <div>6:00pm Cold Plunge · 7:00pm Sound Healing</div>
+              <div>$35 per person · Rain or shine</div>
+              <div>Bring swimsuit, towel, water, comfortable clothing</div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-self: stretch;">
+              <!-- Stripe checkout — direct payment for The Evening Reset -->
+              <a href="https://buy.stripe.com/fZucMY5F40it7HpgaSf3a02" target="_blank" rel="noopener" class="btn btn-ghost btn-arrow" style="flex: 1; min-width: 130px;">Book a spot</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- The Bridge Between -->
+        <article class="card">
+          <div class="card-image portrait">
+            <img src="assets/photos/bridge-between.jpg" alt="The Bridge Between spiritual circle at Serenity Star" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Select Thursdays · 6:30pm</span>
+            <h3>The Bridge Between</h3>
+            <p>A spiritual circle for people who want to strengthen their intuitive gifts. Open discussion, guided meditation, energy alignments, and intuitive activation practices. Hosted by Aubrey and Brittany. Offered on select Thursdays (limited schedule). Max 20 people.</p>
+            <div style="display: grid; gap: 0.4rem; margin: 0.5rem 0 1.25rem; font-family: var(--font-body); font-size: 0.8125rem; color: var(--ink-soft);">
+              <div>7031 Rich Rd N, Fort Myers</div>
+              <div>90 min · $20 per person</div>
+              <div>WhatsApp <a href="https://wa.me/19785010625" style="color: var(--ink); border-bottom: 1px solid var(--line);">978-501-0625</a></div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-self: stretch;">
+              <!-- Stripe checkout — direct payment for The Bridge Between -->
+              <a href="https://buy.stripe.com/9B66oAd7wghraTBbUCf3a00" target="_blank" rel="noopener" class="btn btn-ghost btn-arrow" style="flex: 1; min-width: 130px;">Book a spot</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Divine Alignment -->
+        <article class="card">
+          <div class="card-image portrait">
+            <img src="assets/photos/divine-alignment.jpg" alt="Divine Alignment, Fridays at Serenity Star" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Every Friday · 7:00pm</span>
+            <h3>Divine Alignment</h3>
+            <p>Yoga, breathwork, meditation, and sound healing in one 90-minute session. Move and stretch, then breathe and realign, then close with live sound. Facilitated by Vitaliy. Max 15 people.</p>
+            <div style="display: grid; gap: 0.4rem; margin: 0.5rem 0 1.25rem; font-family: var(--font-body); font-size: 0.8125rem; color: var(--ink-soft);">
+              <div>7031 Rich Rd, North Fort Myers</div>
+              <div>90 min · $25 per person</div>
+              <div>Bring socks, water, and something to lie down on</div>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-self: stretch;">
+              <!-- Stripe checkout — direct payment for Divine Alignment -->
+              <a href="https://buy.stripe.com/dRm9AMffE2qBgdVe2Kf3a01" target="_blank" rel="noopener" class="btn btn-ghost btn-arrow" style="flex: 1; min-width: 130px;">Book a spot</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sauna and Cold Plunge -->
+        <article class="card">
+          <!-- IMAGE NOTE: previously used sauna-deck-sunset.jpg which had the plastic hot tub visible at right. -->
+          <div class="card-image portrait">
+            <img src="assets/photos/sauna-inside-people.jpg" alt="Inside the cedar barrel sauna looking out at the property" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">By Inquiry</span>
+            <h3>Sauna and Cold Plunge Session</h3>
+            <p>Private and group sauna &amp; cold plunge sessions available. <a href="contact.html" style="color: var(--ink); border-bottom: 1px solid var(--ink);">Inquire here</a>.</p>
+            <div style="display: grid; gap: 0.4rem; margin: 0.5rem 0 1.25rem; font-family: var(--font-body); font-size: 0.8125rem; color: var(--ink-soft);">
+              <div>Sauna Deck · North Fort Myers</div>
+            </div>
+            <a href="contact.html" class="btn btn-ghost btn-arrow" style="align-self: flex-start;">Inquire here</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== UPCOMING SPECIAL EVENTS =================== -->
+  <section class="bg-cream-soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Upcoming</span>
+        <h2 class="display">Special Evenings Coming Up</h2>
+        <p class="lead">
+          Visiting facilitators and special events hosted at Serenity Star.
+        </p>
+      </div>
+
+      <div class="card-grid reveal">
+
+        <!-- The Art of Shamanism with Megan -->
+        <article class="card">
+          <div class="card-image">
+            <img src="assets/photos/megan-coaching-headshot.jpg" alt="Megan, facilitator of The Art of Shamanism" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Once a month · 7:00pm</span>
+            <h3>The Art of Shamanism</h3>
+            <p>A guided shamanic journey hosted by Megan. Offered once a month — check the calendar below for the next date. Drop in for a powerful evening of ceremony, reflection, and reset. Limited spots — reserve ahead.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+              <span style="font-family: var(--font-display); font-style: italic; color: var(--ink); font-size: 1.125rem;">$30</span>
+              <a href="https://buy.stripe.com/eVqbIUffEe9jgdV2k2f3a03" target="_blank" rel="noopener" class="btn-link">Reserve Your Spot – $30</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Practitioner outreach (dark card) -->
+        <article class="card" style="background: var(--ink); border-color: var(--ink); color: var(--cream-soft);">
+          <div class="card-body" style="padding: 2.5rem 1.75rem;">
+            <span class="card-tag" style="color: var(--clay);">For Facilitators</span>
+            <h3 style="color: var(--cream-soft);">Are you a practitioner?</h3>
+            <p style="color: rgba(251,247,240,0.75);">We rent the studio to vetted practitioners for one-off classes, workshops, and small retreats. Send us what you'd want to host and we'll get back to you within a few days.</p>
+            <a href="contact.html" class="btn btn-outline-light btn-arrow" style="align-self: flex-start; margin-top: auto;">Get in touch</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FULL CALENDAR =================== -->
+  <section id="full-calendar">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Full Calendar</span>
+        <h2 class="display">Full schedule at a glance.</h2>
+        <p class="lead">
+          Every weekly class and special event lives on this calendar. Subscribe to add it to your own.
+        </p>
+      </div>
+
+      <div class="reveal" style="border-radius: var(--radius-soft); overflow: hidden; border: 1px solid var(--line); background: var(--cream-soft);">
+        <!-- CALENDAR PERMISSION FIX NEEDED:
+        To make this calendar visible to the public:
+        1. Go to calendar.google.com on desktop
+        2. Find the Serenity Star Events calendar in the left sidebar
+        3. Click the three dots next to it and select Settings and sharing
+        4. Under Access permissions, check the box that says Make available to public
+        5. Click OK on the confirmation popup
+        6. The calendar on the website will update automatically within a few minutes
+        -->
+        <iframe src="https://calendar.google.com/calendar/embed?src=ccb9e6b9e9c71ea43ed21ac69ad2fae79724637e410d00942759b139cd5c8aa5%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0; border-radius: 4px;" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== EMAIL SIGNUP =================== -->
+  <section class="bg-ink">
+    <div class="container-narrow text-center reveal">
+      <h2 class="display" style="color: var(--cream-soft);">
+        Get the next event in your inbox.
+      </h2>
+      <p class="lead" style="color: rgba(251,247,240,0.8); margin: 1.5rem auto 2.5rem;">
+        One short email a month with what's coming up. No spam, no upsells.
+      </p>
+
+      <!-- Mailchimp signup form (Serenity Star audience). Form submits to Mailchimp
+           and the confirmation opens in a new tab. -->
+      <form action="https://serenitystarwellness.us12.list-manage.com/subscribe/post?u=39a93b07fe026bcb90cc39a70&id=45cb70325d&f_id=00f28de3f0" method="post" target="_blank" class="form mailchimp-form"
+        style="max-width: 560px; margin: 0 auto;">
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+          <input type="email" name="EMAIL" placeholder="your@email.com" required
+            style="flex: 1; min-width: 200px; padding: 0.95rem 1rem; border: 1px solid rgba(251,247,240,0.3); background: transparent; color: var(--cream-soft); border-radius: 2px; font-family: var(--font-body);" />
+          <input type="text" name="FNAME" placeholder="First name"
+            style="flex: 1; min-width: 160px; padding: 0.95rem 1rem; border: 1px solid rgba(251,247,240,0.3); background: transparent; color: var(--cream-soft); border-radius: 2px; font-family: var(--font-body);" />
+          <button type="submit" class="btn btn-light">Stay in the loop</button>
+        </div>
+        <!-- Anti-bot honeypot (Mailchimp requires this; do not remove). -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_39a93b07fe026bcb90cc39a70_45cb70325d" tabindex="-1" value="">
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <!-- EDIT: footer (shared with every page) — update once and copy/paste to all 7 HTML files -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+            <span class="brand-name">Serenity Star</span>
+          </div>
+          <p>Wellness, coaching, and ceremony on a private property in Southwest Florida.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Classes</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="kambo.html">Kambo</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="stay.html">Stay</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Rent Our Space</a></li>
+            <li><a href="coaching.html">Book a discovery call</a></li>
+            <!-- Replace with Brittany's Instagram handle -->
+            <li><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener">Join our WhatsApp community</a></li>
+            <li><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="mailto:serenitystarfl@gmail.com">serenitystarfl@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>The Land</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></li>
+            <li>By appointment &amp; booking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Serenity Star</span>
+        <span>Crafted with intention</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Mailchimp form validation -->
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</body>
+</html>

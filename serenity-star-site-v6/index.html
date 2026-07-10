@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     HOME PAGE  (index.html)
+     ----------------------------------------------------------------
+     EDITING THIS PAGE:
+     - Look for blocks marked 'EDIT:' below. Each one calls out the
+       text, link, price, or image you can safely change.
+     - Headlines live inside <h1>, <h2>, <h3> tags.
+     - Body copy lives inside <p> tags.
+     - Button text is the words between <a ...>...</a> tags.
+     - Prices and dates are plain text inside the relevant card body.
+     - To swap a photo, replace the src="assets/photos/<filename>.jpg".
+     - Don't change indentation, the class="..." attributes, or the
+       tag structure — those control how it looks.
+
+     This page contains:
+       - Hero (headline + intro + 2 buttons)
+       - What is Serenity Star (intro split)
+       - Six offerings grid (clickable cards)
+       - Property image band
+       - Coaching teaser
+       - Upcoming Events (3 rows — easy to edit/add/remove)
+       - Retreats teaser
+       - Testimonials (placeholders, swap in real quotes)
+       - Stay subtle section
+       - Bottom CTA (Book a call)
+       - Footer
+
+     For the full guide, see CONTENT_GUIDE.md in the project root.
+===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serenity Star | Wellness, Coaching & Ceremony in North Fort Myers</title>
+  <meta name="description" content="Yoga, ice baths, sauna, sound healing, breathwork, kambo, and one-on-one coaching on a private property in Southwest Florida. Founded by Brittany Peters." />
+  <!-- Open Graph / social share -->
+  <meta property="og:title" content="Serenity Star | Wellness, Coaching & Ceremony in North Fort Myers" />
+  <meta property="og:description" content="Yoga, ice baths, sauna, sound healing, breathwork, kambo, and one-on-one coaching on a private property in Southwest Florida. Founded by Brittany Peters." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photos/mural-full.jpg" />
+  <meta property="og:url" content="https://serenitystar.co/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Serenity Star | Wellness, Coaching & Ceremony in North Fort Myers" />
+  <meta name="twitter:description" content="Yoga, ice baths, sauna, sound healing, breathwork, kambo, and one-on-one coaching on a private property in Southwest Florida. Founded by Brittany Peters." />
+  <meta name="twitter:image" content="assets/photos/mural-full.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+</head>
+<body>
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header is-light">
+    <div class="container nav-row">
+      <a href="index.html" class="brand" aria-label="Serenity Star home">
+        <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+        <span class="brand-name">Serenity Star</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="kambo.html">Kambo</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stay.html">Stay</a></li>
+        </ul>
+      </nav>
+
+      <a href="coaching.html" class="nav-cta">Book a call</a>
+
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =================== MOBILE NAV =================== -->
+  <div class="mobile-nav" role="dialog" aria-label="Site menu">
+    <button class="mobile-nav-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="kambo.html">Kambo</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="stay.html">Stay</a>
+    <a href="coaching.html" class="btn btn-primary">Book a call</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="assets/photos/mural-full.jpg" alt="The hand-painted mural on the barn at Serenity Star" />
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow" style="color: var(--sand);">A Private Property · North Fort Myers, FL</span>
+      <!-- EDIT: page headline (change the text between <h1>...</h1>) -->
+      <h1>Real tools for people ready to <em>heal</em> and live aligned.</h1>
+      <!-- EDIT: hero intro paragraph -->
+      <p class="lead">
+        Weekly classes, 1:1 coaching, kambo ceremonies, sound baths, channeled
+        energy work, and retreats, all in one place at Serenity Star in North
+        Fort Myers, Southwest Florida.
+      </p>
+      <div class="hero-actions">
+        <a href="events.html" class="btn btn-light btn-arrow">See what's on this week</a>
+        <a href="coaching.html" class="btn btn-outline-light">Book a call with one of our coaches</a>
+      </div>
+    </div>
+    <span class="hero-scroll-cue">Scroll</span>
+  </section>
+
+  <!-- =================== INTRO / WHAT IT IS =================== -->
+  <section>
+    <div class="container">
+      <div class="split">
+        <div class="split-text reveal">
+          <span class="eyebrow">What is Serenity Star</span>
+          <h2 class="display">A place where real healing work gets done.</h2>
+          <p class="lead">
+            Everything here is built around one thing: helping people feel better
+            and reach their highest potential.
+          </p>
+          <p>
+            Drop in for a spiritual circle, yoga, sound healing, energy work, or
+            book a cold plunge and sauna session. Join an extended coaching and
+            integration container, or sit with kambo alongside Brittany.
+          </p>
+          <a href="#offerings" class="btn-link">Explore the offerings</a>
+        </div>
+        <div class="split-media reveal">
+          <img src="assets/photos/aerial-deck-people.jpg" alt="Aerial view of the sauna deck and barn mural" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== OFFERINGS =================== -->
+  <section id="offerings" class="offerings">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Offerings</span>
+        <h2 class="display">Six ways in.</h2>
+        <p class="lead">
+          Each offering is built around your nervous system, your body, and getting
+          real results. Pick what fits where you are right now.
+        </p>
+      </div>
+
+      <div class="offerings-grid reveal">
+        <a href="events.html" class="offering offering-link">
+          <span class="offering-num">i.</span>
+          <h3>Weekly Yoga</h3>
+          <p>Slow grounded movement every Friday night with Vitaliy. All levels welcome.</p>
+          <span class="arrow">See dates</span>
+        </a>
+        <a href="events.html" class="offering offering-link">
+          <span class="offering-num">ii.</span>
+          <h3>Ice Bath and Sauna</h3>
+          <p>Cedar barrel sauna and cold plunge on the deck. Private sessions from $75/hour. The fastest way to reset your body and nervous system.</p>
+          <span class="arrow">See dates</span>
+        </a>
+        <a href="events.html" class="offering offering-link">
+          <span class="offering-num">iii.</span>
+          <h3>Sound Baths</h3>
+          <p>Crystal bowl sound baths with Tiffany and visiting facilitators. Bring a blanket.</p>
+          <span class="arrow">See dates</span>
+        </a>
+        <a href="events.html" class="offering offering-link">
+          <span class="offering-num">iv.</span>
+          <h3>Spiritual Circles</h3>
+          <p>The Bridge Between is offered on select Thursdays (limited schedule) with Aubrey and Brittany. Open discussion, guided meditation, and intuitive practice.</p>
+          <span class="arrow">See dates</span>
+        </a>
+        <a href="coaching.html" class="offering offering-link">
+          <span class="offering-num">v.</span>
+          <h3>1:1 Coaching</h3>
+          <p>Work directly with Brittany or one of her trusted practitioners. Discovery calls are free.</p>
+          <span class="arrow">See all coaches</span>
+        </a>
+        <!-- Kambo is the only home-page offering that goes straight to Brittany's Calendly -->
+        <a href="kambo.html" class="offering offering-link">
+          <span class="offering-num">vi.</span>
+          <h3>Kambo</h3>
+          <p>Frog medicine in a safe, well-prepared setting with Brittany. Every session starts with a conversation.</p>
+          <span class="arrow">Book a call</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FULL-WIDTH IMAGE BAND =================== -->
+  <section class="image-band image-band-tall reveal" style="padding: 0;">
+    <img src="assets/photos/aerial-lake-deck-barn.jpg" alt="Aerial of the lake, sauna deck, and barn at Serenity Star" />
+    <div class="image-band-overlay">
+      <div>
+        <span class="eyebrow" style="color: var(--sand);">The Property</span>
+        <h2>A space where you can finally exhale.</h2>
+        <p>Private acreage in North Fort Myers. A cedar barrel sauna, cold plunge, fire pit, food forest, a fully equipped meditation and movement studio, and an on-site barn with a hand-painted mural. This is where the work happens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== COACHING TEASER =================== -->
+  <section>
+    <div class="container">
+      <div class="split split-reverse">
+        <div class="split-text reveal">
+          <span class="eyebrow">Coaching</span>
+          <h2 class="display">Find the right support for where you are right now.</h2>
+          <p class="lead">
+            Brittany Peters works alongside a circle of trusted practitioners.
+            Each one has their own speciality and their own booking link.
+            Discovery calls are free.
+          </p>
+          <p>
+            Every engagement starts with a free 30-minute call. No pressure to
+            continue if it is not the right fit.
+          </p>
+          <a href="coaching.html" class="btn btn-ghost btn-arrow">See all coaches</a>
+        </div>
+        <div class="split-media tall reveal">
+          <img src="assets/photos/studio-session.jpg" alt="A coach leading a session in the meditation room" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== UPCOMING EVENTS =================== -->
+  <section class="bg-cream-soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">This Week</span>
+        <h2 class="display">Upcoming Events</h2>
+      </div>
+
+      <!-- TO UPDATE EVENTS: Edit the title, date, tag, details, and button link in each event-row block below. Each event is one div.event-row -->
+      <div class="reveal">
+        <!-- Events ordered chronologically through the week: Wed → Thu → Fri -->
+        <div class="event-row">
+          <div class="event-date">
+            <span class="day">Wed</span>
+            <span class="wd">Every Wednesday · 6:00pm</span>
+          </div>
+          <div class="event-detail">
+            <span class="event-type-tag">Cold Plunge · Sound Bath</span>
+            <h3>The Evening Reset</h3>
+            <div class="event-meta">
+              <span>6:00pm Cold Plunge · 7:00pm Sound</span>
+              <span>$35 per person</span>
+              <span>With Tiffany Maria Macia</span>
+            </div>
+          </div>
+          <div class="event-actions">
+            <!-- Stripe checkout — direct payment for The Evening Reset -->
+            <a href="https://buy.stripe.com/fZucMY5F40it7HpgaSf3a02" target="_blank" rel="noopener" class="btn btn-primary">Reserve Your Spot – $35</a>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date">
+            <span class="day">Thu</span>
+            <span class="wd">Select Thursdays · 6:30pm</span>
+          </div>
+          <div class="event-detail">
+            <span class="event-type-tag">Spiritual Circle</span>
+            <h3>The Bridge Between</h3>
+            <div class="event-meta">
+              <span>Studio · 90 min</span>
+              <span>$20 per person</span>
+              <span>With Aubrey + Brittany</span>
+            </div>
+          </div>
+          <div class="event-actions">
+            <!-- Stripe checkout — direct payment for The Bridge Between -->
+            <a href="https://buy.stripe.com/9B66oAd7wghraTBbUCf3a00" target="_blank" rel="noopener" class="btn btn-primary">Reserve Your Spot – $20</a>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date">
+            <span class="day">Fri</span>
+            <span class="wd">Every Friday · 7:00pm</span>
+          </div>
+          <div class="event-detail">
+            <span class="event-type-tag">Yoga · Breathwork · Sound</span>
+            <h3>Divine Alignment</h3>
+            <div class="event-meta">
+              <span>Studio · 90 min</span>
+              <span>$25 per person</span>
+              <span>With Vitaliy</span>
+            </div>
+          </div>
+          <div class="event-actions">
+            <!-- Stripe checkout — direct payment for Divine Alignment -->
+            <a href="https://buy.stripe.com/dRm9AMffE2qBgdVe2Kf3a01" target="_blank" rel="noopener" class="btn btn-primary">Reserve Your Spot – $25</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; text-align: center;" class="reveal">
+        <a href="events.html#full-calendar" class="btn-link">See the full calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== RETREATS TEASER =================== -->
+  <section>
+    <div class="container">
+      <div class="split">
+        <div class="split-media landscape reveal">
+          <img src="assets/photos/aerial-food-forest.jpg" alt="Aerial view of the food forest" />
+        </div>
+        <div class="split-text reveal">
+          <span class="eyebrow">Retreats</span>
+          <h2 class="display">Longer time on the property when you are ready for it.</h2>
+          <p class="lead">
+            Serenity Star hosts small retreats several times a year on the property
+            and partners with trusted facilitators for destination retreats in
+            South Africa and Portugal.
+          </p>
+          <a href="retreats.html" class="btn-link">See upcoming retreats</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TESTIMONIALS =================== -->
+  <section class="bg-cream-soft">
+    <div class="container">
+      <div class="section-head section-head-center reveal">
+        <span class="eyebrow">What People Say</span>
+        <h2 class="display">From people who have worked with Brittany.</h2>
+      </div>
+
+      <div class="quote-grid reveal">
+        <article class="quote-card">
+          <p>"Finding Serenity Star and working with Brittany Peters has completely transformed my life. As someone entirely new to plant medicine and energy work, I wasn't sure what to expect, but Brittany welcomed me with open arms. She didn't just introduce me to these healing modalities, she brought me into an incredible community of spiritual individuals who dedicate themselves daily to personal growth. Since attending functions at Serenity Star and getting to know Brittany, I have experienced a profound spiritual awakening and a total commitment to self-improvement. My life looks completely different now. I am living a much more fulfilled life focused on clean living, healthy habits, and I have even stopped drinking entirely. I thank God every day for guiding me to this space. I am eternally grateful to everyone who introduced me to this circle and to the teachers who continue to guide us. Thank you, Brittany, for opening the door to this beautiful new world."</p>
+          <span class="quote-author">Talon McChesney</span>
+        </article>
+        <article class="quote-card">
+          <p>"I've been going to Serenity Star for over a year now and working with Brittany through multiple offerings and healing practices. I can honestly say it has become one of my favorite sanctuaries. The moment you arrive, it's like taking a deep breath and stepping away from all the noise of everyday life. It's a space where you're invited to simply be, to slow down, feel, heal, and reconnect with yourself in a way that is so rare in today's world. One of my favorite experiences is the hot and cold therapy sessions paired with Brittany's guided meditation and breathwork. Every single time I leave feeling lighter, calmer, deeply at peace, and completely revitalized. What makes Serenity Star truly special is not just the beautiful space or the practices. It is the community Brittany has created. It has become family. It is a place filled with people who are willing to live deeply, feel deeply, and heal deeply. I am incredibly grateful to have Brittany as a soul sister and to witness her vision come to life. Watching her create such a safe, intentional, and loving space for her community has been beautiful to experience and be a part of. Serenity Star has become a place where I return to myself, and for that I will always be grateful."</p>
+          <span class="quote-author">Leticia Uribe</span>
+        </article>
+        <article class="quote-card">
+          <p>"Before working with Brittany I felt trapped by my gambling addiction and everything that came with it. I felt guilt, denial, depression, and the isolation that comes from hiding it from the people you care about most. My experience with Kambo was life changing. It helped me break a cycle that had controlled my life for years and gave me a renewed sense of clarity, self-respect, and purpose. Throughout the process, I always felt completely safe, supported, and cared for. Even during unexpected moments, everything was handled with professionalism, compassion, and confidence. I couldn't have asked for a more comfortable environment to do this work. I'm incredibly grateful for the role this experience played in my recovery and in helping me become a better version of myself."</p>
+          <span class="quote-author">Erik Anderson</span>
+        </article>
+        <article class="quote-card">
+          <p>"I was fortunate enough to meet Brittany at Publix and later that night her TikTok for Serenity Star came up on my feed. I knew immediately we were meant to connect and joined the next Thursday Bridge Between group. As a traveling nurse it's hard to meet community on the road. I told Brittany I wish I was camping there, and a little while later Brittany called to tell me a spot had opened up. It was like divine intervention leading me to a beautiful healing community when I needed it the most. This allowed me to get closer with Brittany and I shared my experiences with Plant Medicine and Kambo. Before I left for my next contract I decided to sit with Brittany for another Kambo session. She is an amazing practitioner and is doing exactly what she was meant to do in this world. I can honestly say I have never felt so safe, seen, loved and supported, which is so important when participating in these brave and very vulnerable moments of your healing journey. It was completely different than my previous experience. If you are being called to explore these types of options for healing and growth, I encourage you to reach out to Brittany. She is so knowledgeable and a wonderful educator and practitioner."</p>
+          <span class="quote-author">Jenny Rull</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== STAY (subtle) =================== -->
+  <section class="section-tight">
+    <div class="container-narrow text-center reveal">
+      <span class="eyebrow">Stay on the Property</span>
+      <h2 style="font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1rem;">Overnight stays available for guests of the work.</h2>
+      <p class="lead" style="margin: 0 auto 2rem;">
+        Accommodations are available on the property for guests traveling in for
+        events, retreats, and experiences at Serenity Star.
+      </p>
+      <a href="stay.html" class="btn-link">Learn more about staying</a>
+    </div>
+  </section>
+
+  <!-- =================== CTA =================== -->
+  <section class="bg-ink">
+    <div class="container-narrow text-center reveal">
+      <span class="eyebrow" style="color: var(--clay);">Start Here</span>
+      <h2 class="display" style="color: var(--cream-soft);">
+        Not sure where to start? <em style="color: var(--sand);">Get in touch.</em>
+      </h2>
+      <p class="lead" style="color: rgba(251,247,240,0.8); margin: 1.5rem auto 2.5rem;">
+        Tell us what you're looking for and we'll point you to the right next step.
+      </p>
+      <a href="contact.html" class="btn btn-light btn-arrow">Get in touch</a>
+      <p style="margin-top: 1rem; font-size: 0.875rem; color: rgba(251,247,240,0.65);">
+        Or <a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener" style="color: rgba(251,247,240,0.85); text-decoration: underline;">join our free community on WhatsApp</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <!-- EDIT: footer (shared with every page) — update once and copy/paste to all 7 HTML files -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+            <span class="brand-name">Serenity Star</span>
+          </div>
+          <p>Wellness, coaching, and ceremony on a private property in Southwest Florida.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Classes</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="kambo.html">Kambo</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="stay.html">Stay</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Rent Our Space</a></li>
+            <li><a href="coaching.html">Book a discovery call</a></li>
+            <!-- Replace with Brittany's Instagram handle -->
+            <li><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener">Join our WhatsApp community</a></li>
+            <li><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="mailto:serenitystarfl@gmail.com">serenitystarfl@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>The Land</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></li>
+            <li>By appointment &amp; booking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Serenity Star</span>
+        <span>Crafted with intention</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

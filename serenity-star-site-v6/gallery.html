@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     GALLERY PAGE  (gallery.html)
+     ----------------------------------------------------------------
+     A masonry-style grid of property and event photos. Images live in
+     assets/photos/gallery/ — to add or replace an image:
+       1. Drop the new file into assets/photos/gallery/
+       2. Add a <figure class="gallery-item"> block below following the
+          existing pattern. Keep the loading="lazy" attribute so the
+          page stays fast on mobile.
+
+     This page contains:
+       - Hero
+       - Image grid (lightbox enabled via js/main.js)
+       - Footer
+===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Serenity Star</title>
+  <meta name="description" content="A look inside Serenity Star — the studio, the property, our community gatherings, sound journeys, and wellness experiences in North Fort Myers, Florida." />
+  <meta property="og:title" content="Gallery | Serenity Star" />
+  <meta property="og:description" content="Photos of the property, the studio, sound journeys, sauna nights, and community gatherings at Serenity Star." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photos/gallery/sound-journey.jpg" />
+  <meta property="og:url" content="https://serenitystar.co/gallery.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery | Serenity Star" />
+  <meta name="twitter:description" content="Photos of the property, the studio, sound journeys, sauna nights, and community gatherings at Serenity Star." />
+  <meta name="twitter:image" content="assets/photos/gallery/sound-journey.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+</head>
+<body>
+
+  <header class="site-header is-light">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+        <span class="brand-name">Serenity Star</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="kambo.html">Kambo</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stay.html">Stay</a></li>
+        </ul>
+      </nav>
+      <a href="coaching.html" class="nav-cta">Book a call</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="kambo.html">Kambo</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="stay.html">Stay</a>
+    <a href="coaching.html" class="btn btn-primary">Book a call</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="bg-cream-soft" style="padding-top: 7rem;">
+    <div class="container-narrow text-center reveal">
+      <span class="eyebrow">Gallery</span>
+      <h1 class="display">A look inside <em>Serenity Star</em>.</h1>
+      <p class="lead" style="max-width: 60ch; margin: 1.25rem auto 0;">
+        Moments from the studio, the property, and the community &mdash; sound journeys,
+        sauna nights, color therapy, outdoor yoga, shared meals, and quiet rituals.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== GALLERY GRID =================== -->
+  <section>
+    <div class="container">
+      <div class="gallery-grid reveal">
+        <figure class="gallery-item" data-caption="Aubrey spoons">
+          <img src="assets/photos/gallery/aubrey-spoons.jpg" alt="Aubrey spoons" loading="lazy" decoding="async" width="1600" height="2841" />
+        </figure>
+        <figure class="gallery-item" data-caption="Barn mural">
+          <img src="assets/photos/gallery/barn-mural.jpg" alt="Barn mural" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Botanical mocktail">
+          <img src="assets/photos/gallery/botanical-mocktail.jpg" alt="Botanical mocktail" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Brittany mocktail">
+          <img src="assets/photos/gallery/brittany-mocktail.jpg" alt="Brittany mocktail" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Color therapy man">
+          <img src="assets/photos/gallery/color-therapy-man.jpg" alt="Color therapy man" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Color therapy woman">
+          <img src="assets/photos/gallery/color-therapy-woman.jpg" alt="Color therapy woman" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Community mocktail pyramid">
+          <img src="assets/photos/gallery/community-mocktail-pyramid.jpg" alt="Community mocktail pyramid" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Cookout outdoor movie">
+          <img src="assets/photos/gallery/cookout-outdoor-movie.jpg" alt="Cookout outdoor movie" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Serenity Star">
+          <img src="assets/photos/gallery/dsc-4445.jpg" alt="Serenity Star" loading="lazy" decoding="async" width="1600" height="1280" />
+        </figure>
+        <figure class="gallery-item" data-caption="Empty studio">
+          <img src="assets/photos/gallery/empty-studio.jpg" alt="Empty studio" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Group shot in pyramid room">
+          <img src="assets/photos/gallery/group-shot-in-pyramid-room.jpg" alt="Group shot in pyramid room" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Serenity Star">
+          <img src="assets/photos/gallery/img-6312.jpg" alt="Serenity Star" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Meditation in studio">
+          <img src="assets/photos/gallery/meditation-in-studio.jpg" alt="Meditation in studio" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Onsite stretch therapy">
+          <img src="assets/photos/gallery/onsite-stretch-therapy.jpg" alt="Onsite stretch therapy" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Outdoor movie and cookout">
+          <img src="assets/photos/gallery/outdoor-movie-and-cookout.jpg" alt="Outdoor movie and cookout" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Outdoor yoga with vitaliy">
+          <img src="assets/photos/gallery/outdoor-yoga-with-vitaliy.jpg" alt="Outdoor yoga with vitaliy" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Private sound journey in studio">
+          <img src="assets/photos/gallery/private-sound-journey-in-studio.jpg" alt="Private sound journey in studio" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Pyramid sound journey">
+          <img src="assets/photos/gallery/pyramid-sound-journey.jpg" alt="Pyramid sound journey" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Pyramid sound journey 2">
+          <img src="assets/photos/gallery/pyramid-sound-journey-2.jpg" alt="Pyramid sound journey 2" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Sauna community">
+          <img src="assets/photos/gallery/sauna-community.jpg" alt="Sauna community" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Savasana circle">
+          <img src="assets/photos/gallery/savasana-circle.jpg" alt="Savasana circle" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Sonic relaxation in studio">
+          <img src="assets/photos/gallery/sonic-relaxation-in-studio.jpg" alt="Sonic relaxation in studio" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Sound journey savasana 2">
+          <img src="assets/photos/gallery/sound-journey-savasana-2.jpg" alt="Sound journey savasana 2" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Sound journey savasana">
+          <img src="assets/photos/gallery/sound-journey-savasana.jpg" alt="Sound journey savasana" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Sound journey">
+          <img src="assets/photos/gallery/sound-journey.jpg" alt="Sound journey" loading="lazy" decoding="async" width="1600" height="2841" />
+        </figure>
+        <figure class="gallery-item" data-caption="Studio with facilitator">
+          <img src="assets/photos/gallery/studio-with-facilitator.jpg" alt="Studio with facilitator" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Susie in studio with bowls">
+          <img src="assets/photos/gallery/susie-in-studio-with-bowls.jpg" alt="Susie in studio with bowls" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Susie with singing bowls">
+          <img src="assets/photos/gallery/susie-with-singing-bowls.jpg" alt="Susie with singing bowls" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Tea mixology">
+          <img src="assets/photos/gallery/tea-mixology.jpg" alt="Tea mixology" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery-item" data-caption="Serenity Star">
+          <img src="assets/photos/gallery/videocapture-20250419-201301.jpg" alt="Serenity Star" loading="lazy" decoding="async" width="1600" height="900" />
+        </figure>
+        <figure class="gallery-item" data-caption="Serenity Star">
+          <img src="assets/photos/gallery/videocapture-20250419-201344.jpg" alt="Serenity Star" loading="lazy" decoding="async" width="1600" height="900" />
+        </figure>
+        <figure class="gallery-item" data-caption="Wellness talk">
+          <img src="assets/photos/gallery/wellness-talk.jpg" alt="Wellness talk" loading="lazy" decoding="async" width="1600" height="2133" />
+        </figure>
+        <figure class="gallery-item" data-caption="Serenity Star">
+          <img src="assets/photos/gallery/pyramid-sound-journey-3.jpg" alt="Serenity Star" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== LIGHTBOX =================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&lsaquo;</button>
+    <img class="lightbox-img" alt="" />
+    <button class="lightbox-nav lightbox-next" aria-label="Next photo">&rsaquo;</button>
+    <div class="lightbox-caption"></div>
+  </div>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+            <span class="brand-name">Serenity Star</span>
+          </div>
+          <p>Wellness, coaching, and ceremony on a private property in Southwest Florida.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Classes</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="kambo.html">Kambo</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="stay.html">Stay</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Rent Our Space</a></li>
+            <li><a href="coaching.html">Book a discovery call</a></li>
+            <li><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener">Join our WhatsApp community</a></li>
+            <li><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="mailto:serenitystarfl@gmail.com">serenitystarfl@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>The Land</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></li>
+            <li>By appointment &amp; booking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; 2026 Serenity Star</span>
+        <span>Crafted with intention</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

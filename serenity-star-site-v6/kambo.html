@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     KAMBO PAGE  (kambo.html)
+     ----------------------------------------------------------------
+     EDITING THIS PAGE:
+     - Look for blocks marked 'EDIT:' below. Each one calls out the
+       text, link, price, or image you can safely change.
+     - Headlines live inside <h1>, <h2>, <h3> tags.
+     - Body copy lives inside <p> tags.
+     - Button text is the words between <a ...>...</a> tags.
+     - Prices and dates are plain text inside the relevant card body.
+     - To swap a photo, replace the src="assets/photos/<filename>.jpg".
+     - Don't change indentation, the class="..." attributes, or the
+       tag structure — those control how it looks.
+
+     This page contains:
+       - Hero (Brittany + frog photo, positioned via CSS class hero-media--brittany-frog)
+       - What is kambo? intro
+       - Image band quote
+       - Process — 5 steps (Discovery Call, Arrival, Ceremony, Rest, Follow-Up)
+       - Safety + contraindications list
+       - Inquiry CTA (Book a call)
+       - Footer
+
+     For the full guide, see CONTENT_GUIDE.md in the project root.
+===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kambo | Serenity Star</title>
+  <meta name="description" content="Kambo (frog medicine) ceremonies with Brittany Peters in North Fort Myers. What it is, what happens in a session, who can and can't sit with it." />
+  <!-- Open Graph / social share -->
+  <meta property="og:title" content="Kambo | Serenity Star" />
+  <meta property="og:description" content="Kambo (frog medicine) ceremonies with Brittany Peters in North Fort Myers. What it is, what happens in a session, who can and can't sit with it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photos/kambo-frog.jpg" />
+  <meta property="og:url" content="https://serenitystar.co/kambo.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kambo | Serenity Star" />
+  <meta name="twitter:description" content="Kambo (frog medicine) ceremonies with Brittany Peters in North Fort Myers. What it is, what happens in a session, who can and can't sit with it." />
+  <meta name="twitter:image" content="assets/photos/kambo-frog.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+</head>
+<body>
+
+  <header class="site-header is-light">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+        <span class="brand-name">Serenity Star</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="kambo.html">Kambo</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stay.html">Stay</a></li>
+        </ul>
+      </nav>
+      <a href="coaching.html" class="nav-cta">Book a call</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="kambo.html">Kambo</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="stay.html">Stay</a>
+    <a href="coaching.html" class="btn btn-primary">Book a call</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero hero-sub">
+    <!-- IMAGE NOTE: brittany-kambo-frog.jpg was cropping Brittany's face too tightly on desktop heroes.
+         We use the wider, calmer close-up of the frog here and move the Brittany+frog photo down to
+         the Safety section split. -->
+    <div class="hero-media">
+      <img src="assets/photos/kambo-frog.jpg" alt="The kambo frog on a tree at night" />
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow" style="color: var(--sand);">Kambo · Frog Medicine</span>
+      <!-- EDIT: page headline (change the text between <h1>...</h1>) -->
+      <h1>A <em>powerful</em> medicine, handled with care.</h1>
+      <!-- EDIT: hero intro paragraph -->
+      <p class="lead">
+        Brittany started working with Kambo in 2022 after a coach guided her to
+        the medicine to help her through a brain tumor diagnosis. Having had a
+        deep connection with frogs since childhood, she decided to give it a
+        chance. After experiencing profound changes in her life, she felt drawn
+        to learn more, eventually training with CKPI (Certified Kambo
+        Practitioners International) and becoming a certified practitioner
+        herself. This medicine is not for everyone, and anyone feeling the call
+        will start with a discovery call before booking any appointments.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== INTRO =================== -->
+  <section>
+    <div class="container-narrow">
+      <div class="reveal">
+        <span class="eyebrow">What it is</span>
+        <h2 class="display">What is kambo?</h2>
+        <p class="lead">
+          Kambo is the secretion of the Phyllomedusa Bicolor frog, also known as
+          the Giant Monkey Tree Frog, native to the Amazon. Indigenous peoples
+          have worked with this medicine for centuries for physical cleansing,
+          mental clarity, and spiritual reset. Sixteen active peptides move
+          through your system during the 20-minute session with the medicine,
+          working to remove parasites, fungus, illness, and even emotional
+          blockage through purging. On the other side is a clarity that most
+          people describe as unlike anything else, brain fog lifted, clarity on
+          vision and reflection, reduced cravings and old habits, more energy
+          and alignment with intuition and natural flow.
+        </p>
+        <p>
+          This is not a recreational experience. It is not a psychedelic. It works
+          fast and it works hard. People come to kambo for physical detox, emotional
+          release, mental clarity, and to break through a place they have been stuck.
+          Most describe being called to it rather than choosing it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== IMAGE BAND =================== -->
+  <section class="image-band reveal" style="padding: 0;">
+    <img src="assets/photos/brittany-kambo-coaching.jpg" alt="Brittany in a kambo coaching context" />
+    <div class="image-band-overlay">
+      <div>
+        <h2 style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-style: italic; font-family: var(--font-display); font-weight: 300; color: var(--cream-soft);">
+          "Kambo tends to find you when you are ready."
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PROCESS =================== -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">The Process</span>
+        <h2 class="display">How kambo coaching works.</h2>
+      </div>
+
+      <div class="reveal" style="display: grid; gap: 3rem; max-width: 880px;">
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
+          <div style="font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--clay);">01.</div>
+          <div>
+            <h3 style="font-weight: 400; margin-bottom: 0.5rem;">Discovery Call</h3>
+            <p>A required conversation before any session. We go through your health history, your reasons for coming, and exactly what to expect. No session is booked until this call is done.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
+          <div style="font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--clay);">02.</div>
+          <div>
+            <h3 style="font-weight: 400; margin-bottom: 0.5rem;">Arrival &amp; Settling</h3>
+            <p>You arrive at the property, settle into the studio space, drink your water (about 1.5 liters), and we sit together briefly before beginning. Nothing rushed.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
+          <div style="font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--clay);">03.</div>
+          <div>
+            <h3 style="font-weight: 400; margin-bottom: 0.5rem;">The Ceremony</h3>
+            <p>We open with a full ceremony bringing in plant allies such as Sage and Mapacho, say a prayer to the medicine, and discuss the intention for your session. The application itself is brief. Small surface burns called dots are made on the skin (usually upper arm or ankle) and the medicine is applied. The medicine stays on for 20 minutes before being wiped off. We stay with you the whole time.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
+          <div style="font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--clay);">04.</div>
+          <div>
+            <h3 style="font-weight: 400; margin-bottom: 0.5rem;">Rest &amp; Integration</h3>
+            <p>After the ceremony, when you are ready, we will have a resting place where you can relax, nap, and discuss your session while having tea and a light snack before leaving.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start;">
+          <div style="font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--clay);">05.</div>
+          <div>
+            <h3 style="font-weight: 400; margin-bottom: 0.5rem;">Follow-Up</h3>
+            <p>A follow-up call is included with every session. We check in on your integration in the days after and answer any questions that come up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SAFETY =================== -->
+  <section class="bg-cream-soft">
+    <div class="container">
+      <div class="split">
+        <div class="split-text reveal">
+          <span class="eyebrow">Safety</span>
+          <h2 class="display">Some people should not sit with kambo.</h2>
+          <p class="lead">
+            <strong style="color: var(--ink); font-weight: 500;">Do not book a session if any of the following apply to you:</strong>
+          </p>
+
+          <ul class="contraindications" style="list-style: none; padding: 0; margin: 1.25rem 0 1.75rem; display: grid; gap: 0.75rem; font-family: var(--font-body); font-size: 0.9375rem; color: var(--ink);">
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Heart conditions or high blood pressure</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Current use of SSRIs, blood thinners, or immunosuppressants</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Recent surgery or serious illness</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Pregnancy or breastfeeding</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> History of psychosis or severe mental health conditions</li>
+            <li style="padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--clay);">·</span> Liver or kidney conditions</li>
+          </ul>
+
+          <p>
+            This is not a complete list. We go through your full health history on
+            the discovery call. If kambo is not right for you right now, Brittany
+            will tell you plainly and point you toward something that is.
+          </p>
+        </div>
+        <div class="split-media tall reveal">
+          <img src="assets/photos/brittany-kambo-frog.jpg" alt="Brittany Peters with the kambo frog" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== INQUIRY CTA =================== -->
+  <section class="bg-ink">
+    <div class="container-narrow text-center reveal">
+      <span class="eyebrow" style="color: var(--clay);">Start here</span>
+      <h2 class="display" style="color: var(--cream-soft);">
+        Start with a <em style="color: var(--sand);">conversation</em>.
+      </h2>
+      <p class="lead" style="color: rgba(251,247,240,0.8); margin: 1.5rem auto 2.5rem;">
+        Every kambo engagement starts with a free call. No payment until you both
+        agree it is the right move at the right time.
+      </p>
+      <a href="https://calendly.com/serenitystarfl/30min" target="_blank" rel="noopener" class="btn btn-light btn-arrow">Book a call with Brittany</a>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <!-- EDIT: footer (shared with every page) — update once and copy/paste to all 7 HTML files -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+            <span class="brand-name">Serenity Star</span>
+          </div>
+          <p>Wellness, coaching, and ceremony on a private property in Southwest Florida.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Classes</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="kambo.html">Kambo</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="stay.html">Stay</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Rent Our Space</a></li>
+            <li><a href="coaching.html">Book a discovery call</a></li>
+            <!-- Replace with Brittany's Instagram handle -->
+            <li><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener">Join our WhatsApp community</a></li>
+            <li><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="mailto:serenitystarfl@gmail.com">serenitystarfl@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>The Land</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></li>
+            <li>By appointment &amp; booking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Serenity Star</span>
+        <span>Crafted with intention</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     CONTACT PAGE  (contact.html)
+     ----------------------------------------------------------------
+     EDITING THIS PAGE:
+     - Look for blocks marked 'EDIT:' below. Each one calls out the
+       text, link, price, or image you can safely change.
+     - Headlines live inside <h1>, <h2>, <h3> tags.
+     - Body copy lives inside <p> tags.
+     - Button text is the words between <a ...>...</a> tags.
+     - Prices and dates are plain text inside the relevant card body.
+     - To swap a photo, replace the src="assets/photos/<filename>.jpg".
+     - Don't change indentation, the class="..." attributes, or the
+       tag structure — those control how it looks.
+
+     This page contains:
+       - Hero
+       - Contact form (Formspree/Basin handler — see comment in js/main.js)
+       - Contact info column (email, WhatsApp numbers, Instagram, address)
+       - Image band
+       - Footer
+
+     For the full guide, see CONTENT_GUIDE.md in the project root.
+===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Serenity Star</title>
+  <meta name="description" content="Send a note or book a 30-minute call with Brittany. Serenity Star is in North Fort Myers, Southwest Florida." />
+  <!-- Open Graph / social share -->
+  <meta property="og:title" content="Contact | Serenity Star" />
+  <meta property="og:description" content="Send a note, book a 30-minute call, or join the Serenity Star WhatsApp community. North Fort Myers, Southwest Florida." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/photos/mural-full.jpg" />
+  <meta property="og:url" content="https://serenitystar.co/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Serenity Star" />
+  <meta name="twitter:description" content="Send a note, book a 30-minute call, or join the Serenity Star WhatsApp community. North Fort Myers, Southwest Florida." />
+  <meta name="twitter:image" content="assets/photos/mural-full.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+</head>
+<body>
+
+  <header class="site-header is-light">
+    <div class="container nav-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+        <span class="brand-name">Serenity Star</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="kambo.html">Kambo</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="stay.html">Stay</a></li>
+        </ul>
+      </nav>
+      <a href="coaching.html" class="nav-cta">Book a call</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Close menu">×</button>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="kambo.html">Kambo</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="stay.html">Stay</a>
+    <a href="coaching.html" class="btn btn-primary">Book a call</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero hero-sub">
+    <div class="hero-media">
+      <img src="assets/photos/mural-full.jpg" alt="The hand-painted mural on the barn at Serenity Star" />
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow" style="color: var(--sand);">Contact</span>
+      <!-- EDIT: page headline (change the text between <h1>...</h1>) -->
+      <h1>Send us a <em>note</em>.</h1>
+      <!-- EDIT: hero intro paragraph -->
+      <p class="lead">
+        Tell us what you're looking for, ask a question, or book a 30-minute call.
+        We read every message and reply within a day or two.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== FORM + INFO =================== -->
+  <section>
+    <div class="container">
+      <div class="split">
+        <div class="split-text reveal">
+          <span class="eyebrow">Send a note</span>
+          <h2 class="display">A short message is enough.</h2>
+          <p class="lead">A few sentences about what's going on and what you're hoping for. We reply within a day or two.</p>
+
+          <div id="form-success" style="display:none; padding: 1rem; background: #f0f7f0; border-radius: 4px; color: #2e7d32; margin-bottom: 1rem; font-size: 0.9375rem;">
+            Your message has been sent. Brittany will get back to you within a day or two.
+          </div>
+          <form action="https://formspree.io/f/xbdekpky" method="POST" class="form contact-form" style="margin-top: 2rem;">
+            <input type="hidden" name="_replyto" value="serenitystarfl@gmail.com" />
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="interest">I'm interested in</label>
+              <select id="interest" name="interest">
+                <option>Coaching</option>
+                <option>Weekly classes &amp; events</option>
+                <option>A retreat</option>
+                <option>Kambo</option>
+                <option>Staying on the property</option>
+                <option>Hosting an event on the land</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">A few words about what you're hoping for</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <button type="submit" id="form-submit" class="btn btn-primary btn-arrow" style="justify-self: start;">Send the note</button>
+          </form>
+        </div>
+
+        <div class="reveal" style="display: flex; flex-direction: column; gap: 2.5rem;">
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 400; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 1rem;">Email</h3>
+            <p style="margin: 0;"><a href="mailto:serenitystarfl@gmail.com" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;">serenitystarfl@gmail.com</a></p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 400; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 1rem;">WhatsApp</h3>
+            <p style="margin: 0; font-size: 0.9375rem;">Brittany:
+              <a href="https://wa.me/19785010625" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;">978-501-0625</a>
+            </p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 400; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 1rem;">Instagram</h3>
+            <p style="margin: 0;"><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;">@SerenityStarFL</a></p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 400; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 1rem;">Community</h3>
+            <p style="margin: 0;">Join the Serenity Star WhatsApp community for event updates and connection. <a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;">Join the group</a></p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 400; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 1rem;">TikTok</h3>
+            <p style="margin: 0;"><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;">@SerenityStarFL</a></p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.125rem; font-weight: 400; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 1rem;">Address</h3>
+            <p style="margin: 0;"><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== IMAGE BAND =================== -->
+  <section class="image-band reveal" style="padding: 0;">
+    <img src="assets/photos/aerial-overhead.jpg" alt="The property from above" />
+    <div class="image-band-overlay">
+      <h2 style="font-size: clamp(1.75rem, 3vw, 2.5rem); font-style: italic; font-family: var(--font-display); font-weight: 300;">
+        We're glad you wrote.
+      </h2>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <!-- EDIT: footer (shared with every page) — update once and copy/paste to all 7 HTML files -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark"><img src="assets/logo/serenity-star-logo.png" alt="Serenity Star" /></span>
+            <span class="brand-name">Serenity Star</span>
+          </div>
+          <p>Wellness, coaching, and ceremony on a private property in Southwest Florida.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Classes</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="kambo.html">Kambo</a></li>
+            <li><a href="retreats.html">Retreats</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="stay.html">Stay</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Rent Our Space</a></li>
+            <li><a href="coaching.html">Book a discovery call</a></li>
+            <!-- Replace with Brittany's Instagram handle -->
+            <li><a href="https://instagram.com/SerenityStarFL" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://chat.whatsapp.com/LCV1WsL05Qp3bKisuwAA6p" target="_blank" rel="noopener">Join our WhatsApp community</a></li>
+            <li><a href="https://www.tiktok.com/@serenitystarfl" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="mailto:serenitystarfl@gmail.com">serenitystarfl@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>The Land</h4>
+          <ul>
+            <li><a href="https://maps.google.com/?q=7031+Rich+Rd+North+Fort+Myers+FL+33917" target="_blank" rel="noopener">7031 Rich Rd<br/>North Fort Myers, FL 33917</a></li>
+            <li>By appointment &amp; booking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Serenity Star</span>
+        <span>Crafted with intention</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

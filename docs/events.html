@@ -44,6 +44,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" href="assets/logo/serenity-star-logo.png" />
+  <!-- Events page style fixes: aligned buttons + one line heading -->
+  <style>
+    /* Push the small details and buttons to the bottom of each weekly card */
+    .card-body > div[style*="display: grid"] { margin-top: auto !important; }
+    /* Make the Inquire button full width like the Book buttons */
+    .card-body > a.btn-ghost { align-self: stretch !important; }
+    /* Let "Special Evenings Coming Up" sit on one line on wider screens */
+    .bg-cream-soft .section-head { max-width: none; }
+  </style>
 </head>
 <body>
 
